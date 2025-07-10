@@ -2,7 +2,7 @@
 
 # Minimis: Retroid Pocket Mini V2 Edition
 
-A tweaked version of Charles Waldner's Minimis theme for Pegasus, optimized for display on the Retroid Pocket Mini V2 (and potentially other devices).
+A tweaked version of Charles Waldner's Minimis theme for Pegasus, optimized for display on the Retroid Pocket Mini V2 (and potentially other devices). Includes tweaks to UI scaling and sensible default screens for the Mini V2's smaller screen.
 
 ## Screenshots
 

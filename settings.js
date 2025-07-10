@@ -116,7 +116,7 @@ function createHeader(header, obj) {
 function createMetadata() {
     const metadata = {
         library: Object.assign(
-            createCollectionMetadata('library', null, 'library', { columns: 4, preset: 2 }),
+            createCollectionMetadata('library', null, 'library', { columns: 3, preset: 0 }),
         ),
         collections: Object.assign(
             createCollectionMetadata('collections', { key: 'collection1', name: 'Collection 1' }, 'collection', { type: 0, preset: 0 }),
@@ -127,7 +127,7 @@ function createMetadata() {
         ),
         general: Object.assign(
             {
-                uiScale: { name: 'UI Scale', defaultValue: 1, min: 0.5, type: 'real', delta: 0.01 },
+                uiScale: { name: 'UI Scale', defaultValue: 1.9, min: 0.5, type: 'real', delta: 0.01 },
                 backgroundOpacity: { name: 'Background Opacity', defaultValue: 0.8, type: 'real', min: 0, max: 1, delta: 0.01 },
                 backgroundBlurEnabled: { name: 'Background Blur', defaultValue: true, type: 'bool' },
                 backgroundBlurAmount: { name: 'Background Blur Amount', defaultValue: 64, min: 0, max: 64, inset: 1, type: 'int', isEnabled: () => api.memory.get('settings.general.backgroundBlurEnabled') },
@@ -155,8 +155,8 @@ function createMetadata() {
                 { key: 'border', name: 'Border' },
                 {
                     borderEnabled: { name: 'Enabled', defaultValue: true, type: 'bool', },
-                    borderAnimated: { name: 'Animated', defaultValue: true, type: 'bool', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.borderEnabled') },
-                    borderWidth: { name: 'Width', defaultValue: 3, min: 0, type: 'int', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.borderEnabled') },
+                    borderAnimated: { name: 'Animated', defaultValue: false, type: 'bool', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.borderEnabled') },
+                    borderWidth: { name: 'Width', defaultValue: 12, min: 0, type: 'int', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.borderEnabled') },
                     cornerRadius: { name: 'Corner Radius', defaultValue: 5, min: 0, type: 'int', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.borderEnabled') },
                     borderColor1: { name: 'Color 1', defaultValue: '#FFC85C', type: 'string', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.borderEnabled') },
                     borderColor2: { name: 'Color 2', defaultValue: '#ECECEC', type: 'string', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.borderEnabled') },
@@ -167,7 +167,7 @@ function createMetadata() {
                 {
                     titleEnabled: { name: 'Enabled', defaultValue: true, type: 'bool', },
                     titleAlwaysVisible: { name: 'Always Visible', defaultValue: true, type: 'bool', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.titleEnabled') },
-                    titleFontSize: { name: 'Font Size', defaultValue: 20, type: 'int', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.titleEnabled') }
+                    titleFontSize: { name: 'Font Size', defaultValue: 24, type: 'int', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.titleEnabled') }
                 }
             ),
             createHeader(
@@ -176,14 +176,14 @@ function createMetadata() {
             ),
             createHeader(
                 { key: 'overlay', name: 'Overlay' },
-                { darkenAmount: { name: 'Darken', defaultValue: 0.33, delta: 0.01, min: 0.0, max: 1.0, type: 'real', } }
+                { darkenAmount: { name: 'Darken', defaultValue: 0.45, delta: 0.01, min: 0.0, max: 1.0, type: 'real', } }
             ),
             createHeader(
                 { key: 'scaling', name: 'Scaling' },
                 {
                     scaleEnabled: { name: 'Card Scaling - Enabled', defaultValue: true, type: 'bool', },
-                    scale: { name: 'Card Scaling - Default', defaultValue: 0.95, delta: 0.01, min: 0, max: 1.0, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.scaleEnabled') },
-                    scaleSelected: { name: 'Card Scaling - Selected', defaultValue: 1.0, delta: 0.01, min: 0, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.scaleEnabled') },
+                    scale: { name: 'Card Scaling - Default', defaultValue: 0.9, delta: 0.01, min: 0, max: 1.0, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.scaleEnabled') },
+                    scaleSelected: { name: 'Card Scaling - Selected', defaultValue: 1.1, delta: 0.01, min: 0, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.scaleEnabled') },
                     logoScaleEnabled: { name: 'Logo Scaling - Enabled', defaultValue: true, type: 'bool', },
                     logoScale: { name: 'Logo Scaling - Default', defaultValue: 0.75, delta: 0.01, min: 0.01, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.logoScaleEnabled') },
                     logoScaleSelected: { name: 'Logo Scaling - Selected', defaultValue: 0.85, delta: 0.01, min: 0, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.logoScaleEnabled') },
@@ -193,7 +193,7 @@ function createMetadata() {
                 { key: 'videoPreview', name: 'Video Preview' },
                 {
                     previewEnabled: { name: 'Enabled', defaultValue: true, type: 'bool' },
-                    previewVolume: { name: 'Volume', defaultValue: 0.0, delta: 0.1, min: 0.0, max: 1.0, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.previewEnabled') },
+                    previewVolume: { name: 'Volume', defaultValue: 0.2, delta: 0.1, min: 0.0, max: 1.0, type: 'real', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.previewEnabled') },
                     videoPreviewDelay: { name: 'Delay', defaultValue: 1000, min: 0, delta: 50, type: 'int', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.previewEnabled') },
                     previewLogoVisible: { name: 'Logo - Visible', defaultValue: false, type: 'bool', inset: 1, isEnabled: () => api.memory.get('settings.cardTheme.previewEnabled') },
                 }
