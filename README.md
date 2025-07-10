@@ -1,18 +1,22 @@
-![](.meta/screenshots/screen1.png)
+![](.meta/screenshots/screenshot1.png)
 
-# Minimis
+# Minimis: Retroid Pocket Mini V2 Edition
 
-A theme I wrote for Pegasus on my Nvidia Shield
-
-## Installation
-
-[Download](https://github.com/waldnercharles/Minimis/archive/refs/heads/master.zip) and extract the theme to your [theme directory](http://pegasus-frontend.org/docs/user-guide/installing-themes). You can then select it in the settings menu of Pegasus.
+A tweaked version of Charles Waldner's Minimis theme for Pegasus, optimized for display on the Retroid Pocket Mini V2 (and potentially other devices).
 
 ## Screenshots
 
-![](.meta/screenshots/screen2.jpg)
-![](.meta/screenshots/screen3.png)
-![](.meta/screenshots/screen4.jpg)
-![](.meta/screenshots/screen5.png)
-![](.meta/screenshots/screen6.jpg)
-![](.meta/screenshots/screen7.png)
+Default
+![](.meta/screenshots/screenshot0.png)
+Optimized
+![](.meta/screenshots/screenshot1.png)
+
+Default
+![](.meta/screenshots/screenshot2.png)
+Optimized
+![](.meta/screenshots/screenshot3.png)
+
+Default
+![](.meta/screenshots/screenshot4.png)
+Optimized
+![](.meta/screenshots/screenshot5.png)
