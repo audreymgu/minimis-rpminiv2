@@ -1,4 +1,4 @@
-![](.meta/screenshots/preview-img.jpg)
+![](.meta/screenshots/preview-img.png)
 
 # Minimis: Retroid Pocket Mini V2 Edition
 
